@@ -1,5 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+
+img{
+  width: 400px;
+}
+
 .wrapper{
   width: 1200px;
+  margin: 0 auto;
 }
 .title{
   text-align: center;

@@ -442,3 +442,283 @@ body {
   line-height: 19px;
   color: #333333;
 }
+
+.slider-blog {
+  background-color: #F8F6FA;
+  padding: 115px 0;
+}
+
+.slider-blog__item {
+  padding: 190px 0;
+}
+
+.slider-blog__item-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  color: #242121;
+  margin-bottom: 10px;
+  max-width: 675px;
+}
+
+.slider-blog__item-descr {
+  max-width: 600px;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+}
+
+.slick-dots li+li {
+  margin-left: 13px;
+}
+
+.slick-dots button {
+  background-color: #242121;
+  opacity: 0.4;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  font-size: 0;
+  padding: 0;
+  border: none;
+  align-self: center;
+}
+
+.slick-active button {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-2px);
+}
+
+.slick-arrow {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+}
+
+.slick-prev {
+  left: -95px;
+}
+
+.slick-next {
+  right: -95px;
+}
+
+.team {
+  padding: 120px 0 130px;
+}
+
+.team__title {
+  margin-bottom: 100px;
+}
+
+.team__items {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.team__name {
+  padding: 35px 0 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+}
+
+.team__position {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.pricing {
+  background-color: #F6F8FA;
+  padding: 144px 0 162px;
+}
+
+.pricing__title {
+  margin-bottom: 90px;
+}
+
+.pricing__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.pricing__item {
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 24px 25px 50px;
+  width: 370px;
+}
+
+.pricing__item li {
+  font-size: 16px;
+  line-height: 22px;
+  color: #242121;
+  margin-bottom: 30px;
+}
+
+.pricing__item .pricing__item-name {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pricing__item .pricing__item-num {
+  font-size: 80px;
+  line-height: 109px;
+  margin-bottom: 50px;
+}
+
+.pricing__item-num sup {
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.pricing__item-link {
+  display: block;
+  margin-top: 70px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1.2px;
+  color: #242121;
+}
+
+.clients {
+  padding: 70px 0 95px;
+}
+
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.connection {
+  padding: 145px 0 160px;
+  background-image: url('../images/map.jpg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right 82%;
+}
+
+.connection__title {
+  margin-bottom: 80px;
+}
+
+.form {
+  max-width: 570px;
+}
+
+.form input,
+.form textarea {
+  border: none;
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #373A39;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 3.70909px;
+  padding: 16px 0;
+  margin-bottom: 16px;
+}
+
+.form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  color: #B8B8B8;
+}
+
+.form button {
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #242121;
+  padding: 17px 70px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer_top {
+  padding: 110px 10px 60px;
+  background-color: #333333;
+  text-align: center;
+}
+
+.footer__logo {
+  display: inline-block;
+  padding: 0 35px 4px;
+  border-bottom: 2px solid #FCBB08;
+  margin-bottom: 70px;
+}
+
+ul.footer__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+
+.footer__social-list {
+  margin: 0 15px;
+}
+
+.footer__social-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+}
+
+.footer__contact {
+  font-weight: 400;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.footer__contact a {
+  display: block;
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+
+.go-top {
+  display: inline-block;
+
+}
+
+.footer_copy {
+  background: #2A2C2B;
+  padding: 40px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #CCCCCC;
+  text-align: center;
+}

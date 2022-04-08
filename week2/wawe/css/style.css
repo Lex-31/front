@@ -418,32 +418,132 @@ body {
   margin-bottom: 160px;
 }
 
+.slider-blog__item {
+  position: relative;
+}
+
 .slider-blog__item-img {
   width: 100%;
 }
 
-.slider-blog__item-img:hover {
-  background-color: rgba(36, 33, 33, 0.5);
-}
-
-.slider-blog__item-container {
+.slider_blog__item-bg {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(36, 33, 33, 0.5);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.slider_blog__item-bg:hover {
+  opacity: 1;
+}
+
+.slider-blog__item-content {
+  position: absolute;
   width: 600px;
+  text-align: left;
+  top: 314px;
+  right: 0;
+  margin-left: auto;
+  margin-right: 360px;
 }
 
 .slider-blog__item-title {
-  display: block;
   font-weight: 400;
   font-size: 48px;
   line-height: 56px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .slider-blog__item-descr {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
+}
 
+.slick-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 700px;
+  left: 50%;
+}
+
+.slick-dots li+li {
+  margin-left: 15px;
+}
+
+.slick-dots button {
+  background-color: #ffffff;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  padding: 0;
+}
+
+.slick-active button {
+  background-color: #00B2A0;
+}
+
+.team__items {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 113px;
+  margin-bottom: 200px;
+}
+
+.team__name {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 25px 0 5px;
+}
+
+.team__position {
+  font-weight: 400;
+}
+
+.pricing {
+  background-color: #F8F8F8;
+}
+
+.pricing__items {
+  display: flex;
+  justify-content: center;
+}
+
+ul.pricing__item {
+  padding: 45px 31px;
+  background-color: #FFFFFF;
+}
+
+.pricing__item li+li {
+  margin-top: 20px;
+}
+
+.pricing__item-name,
+.pricing__item-num {
+  margin-bottom: 58px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #01353E;
+  text-align: center;
+}
+
+li.pricing__item-num {
+  margin-top: auto;
+}
+
+.pricing__item-num span {
+  font-size: 18px;
+  line-height: 22px;
+  align-self: center;
 }

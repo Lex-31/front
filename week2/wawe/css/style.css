@@ -356,6 +356,11 @@ body {
   font-weight: 400;
   font-size: 24px;
   color: #242121;
+  transition: color .3s;
+}
+
+.gallery_add:hover {
+  color: #00B2A0;
 }
 
 .blockquote {
@@ -512,16 +517,21 @@ body {
 
 .pricing {
   background-color: #F8F8F8;
+  padding-bottom: 200px;
 }
 
 .pricing__items {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 113px;
 }
 
 ul.pricing__item {
-  padding: 45px 31px;
+  padding: 45px 31px 0;
   background-color: #FFFFFF;
+  height: 580px;
+  width: 360px;
+  position: relative;
 }
 
 .pricing__item li+li {
@@ -539,11 +549,139 @@ ul.pricing__item {
 }
 
 li.pricing__item-num {
-  margin-top: auto;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto 45px;
+  bottom: 0;
+  left: 0;
 }
 
 .pricing__item-num span {
   font-size: 18px;
   line-height: 22px;
-  align-self: center;
+  vertical-align: middle;
+}
+
+.map {
+  margin: 200px 0;
+  padding-top: 100px;
+  background-image: url('../images/map.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 640px;
+}
+
+.map__point {
+  display: block;
+}
+
+.map__point img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.connection .title {
+  padding: 0 0 200px;
+}
+
+.connection__inner {
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.form {
+  flex: none;
+  width: 600px;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 570px;
+  border: none;
+  border-bottom: 2px solid #DADADA;
+  letter-spacing: 0.6px;
+  margin-bottom: 32px;
+  padding-bottom: 18px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #242121;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #00B2A0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.form textarea {
+  min-height: 156px;
+  resize: none;
+  margin: 53px 0 73px;
+}
+
+.form button {
+  padding: 24px 111px;
+  border: 2px solid #C4C4C4;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  color: #242121;
+  text-transform: uppercase;
+  transition: color .3s;
+}
+
+.form button:hover {
+  color: #00B2A0;
+}
+
+.connection__contact {
+  flex: none;
+  width: 600px;
+  background-color: #F8F8F8;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 49px 220px 0 52px;
+}
+
+.messenger {
+  margin-top: 65px;
+}
+
+.phone {
+  color: #242121;
+}
+
+.address {
+  margin-top: 65px;
+}
+
+ul.connection__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.connection__social-link {
+  margin-right: 10px;
+  color: #242121;
+  transition: color .3s;
+}
+
+.connection__social-link:hover {
+  color: #00B2A0;
+}
+
+.footer {
+  background-color: #00B2A0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

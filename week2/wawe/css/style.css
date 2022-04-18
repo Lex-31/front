@@ -106,6 +106,10 @@ body {
   margin-right: auto;
 }
 
+.menu__btn {
+  display: none;
+}
+
 .logo,
 .menu__list-item,
 .header__title,
@@ -130,7 +134,7 @@ body {
   line-height: 28px;
   letter-spacing: 0.6px;
   color: #FFFFFF;
-  border-bottom: 1px transparent;
+  border-bottom: 1px solid transparent;
   transition: border .5s;
 }
 
@@ -140,7 +144,6 @@ body {
 }
 
 .header__content-inner {
-  /* min-height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,8 +166,8 @@ body {
 }
 
 .title {
-  padding-top: 200px;
-  padding-bottom: 70px;
+  /* padding-top: 200px; */
+  /* padding-bottom: 70px; */
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 48px;
@@ -182,14 +185,21 @@ body {
   vertical-align: top;
 }
 
+.about {
+  padding: 190px 0 170px;
+}
+
+.about__title {
+  margin-bottom: 70px;
+}
+
 .about__text {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 170px;
 }
 
 .about__text p {
-  width: 480px;
+  max-width: 480px;
   height: 87px;
   margin-right: auto;
   margin-bottom: 30px;
@@ -197,7 +207,11 @@ body {
 
 .school {
   background-color: #F8F8F8;
-  padding-bottom: 200px;
+  padding: 200px 0 200px;
+}
+
+.school__title {
+  margin-bottom: 70px;
 }
 
 .school__items {
@@ -275,22 +289,23 @@ body {
 }
 
 .vertex {
-  display: flex;
+  padding: 200px 0 117px;
+  margin-bottom: 200px;
+  background-image: url('../images/vertex.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%;
 }
+
 
 .vertex__title {
   text-align: left;
+  margin-bottom: 70px;
 }
 
 .vertex__text {
   max-width: 507px;
   margin-bottom: 30px;
-}
-
-.vertex__img {
-  width: 960px;
-  height: 850px;
-  display: block;
 }
 
 .gallery h2 {
@@ -684,4 +699,196 @@ ul.connection__social {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1600px) {
+  .vertex {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1252px) {
+  .about {
+    padding: 120px 0 70px;
+  }
+
+  .about__title,
+  .school__title {
+    margin-bottom: 50px;
+  }
+
+  .school {
+    padding: 120px 0 100px;
+  }
+
+  .school__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .school__info {
+    margin: 0 0 30px;
+  }
+
+  .vertex {
+    margin-bottom: 100px;
+  }
+
+  .vertex__title {
+    font-size: 30px;
+  }
+
+  .vertex__title::after {
+    font-size: 45px;
+    line-height: 80px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .school__items {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  .school__item {
+    width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .school__item-title {
+    padding-left: 0;
+  }
+
+  .school__item-title::before {
+    left: 150px;
+  }
+}
+
+@media (max-width: 1082px) {
+  .about__text {
+    display: block;
+  }
+
+  .about__text p {
+    margin: 0 auto 30px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .title::after {
+    font-size: 45px;
+    line-height: 80px;
+  }
+
+  .vertex {
+    background-size: 40%;
+  }
+
+  .vertex__title {
+    margin-bottom: 30px;
+  }
+
+  .vertex__text {
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 880px) {
+  .menu {
+    margin-right: 0;
+  }
+
+  .menu__btn {
+    display: block;
+    position: relative;
+    padding-right: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .menu__list {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    background-color: #0D302C;
+    transform: translateY(-120%);
+  }
+
+  .menu__list--active {
+    transform: translateY(0);
+  }
+
+  ul.menu__list {
+    padding: 100px 0 20px;
+  }
+
+  .menu__list li+li {
+    margin-left: 0;
+  }
+
+  .menu__list-link {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .header__title {
+    font-size: 120px;
+    line-height: 170px;
+    margin-top: 80px;
+  }
+
+  .vertex {
+    background: none;
+    padding-top: 100px;
+  }
+
+  .vertex__title {
+    text-align: center;
+  }
+
+  .vertex__text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .school__item {
+    width: 300px;
+  }
+
+  .school__item-title {
+    font-size: 20px;
+  }
+
+  .school__item-title::before {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__title {
+    font-size: 90px;
+  }
+
+  .header__subtitle {
+    font-size: 15px;
+  }
+
+  .school__item {
+    width: 220px;
+  }
+
+  .school__item-title::before {
+    display: none;
+  }
 }

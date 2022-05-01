@@ -308,8 +308,12 @@ body {
   margin-bottom: 30px;
 }
 
-.gallery h2 {
-  margin-bottom: 110px;
+.gallery {
+  padding-bottom: 200px;
+}
+
+.gallery_title {
+  margin-bottom: 183px;
 }
 
 .gallery__filter-btn {
@@ -730,9 +734,6 @@ ul.connection__social {
     margin: 0 0 30px;
   }
 
-  .vertex {
-    margin-bottom: 100px;
-  }
 
   .vertex__title {
     font-size: 30px;
@@ -741,6 +742,25 @@ ul.connection__social {
   .vertex__title::after {
     font-size: 45px;
     line-height: 80px;
+  }
+
+  .gallery_title {
+    margin-bottom: 100px;
+  }
+
+  .vertex,
+  .gallery_add,
+  .blockquote,
+  .gallery__video {
+    margin-bottom: 120px;
+  }
+
+  .gallery {
+    padding-bottom: 120px;
+  }
+
+  .gallery__content {
+    column-gap: 25px;
   }
 }
 
@@ -795,6 +815,10 @@ ul.connection__social {
   .vertex__text {
     max-width: 500px;
     margin-bottom: 20px;
+  }
+
+  .blockquote__author {
+    padding-left: 0;
   }
 }
 
@@ -872,6 +896,20 @@ ul.connection__social {
 
   .school__item-title::before {
     left: 0;
+  }
+
+  .gallery__number {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery__number-item {
+    width: 50%;
+  }
+
+  .blockquote {
+    font-size: 28px;
+    padding: 0 20px;
   }
 }
 

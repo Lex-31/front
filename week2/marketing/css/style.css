@@ -738,6 +738,7 @@ ul.footer__social {
 
   .slick-prev {
     left: 0;
+    z-index: 2;
   }
 
   .slick-next {

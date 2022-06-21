@@ -166,8 +166,6 @@ body {
 }
 
 .title {
-  /* padding-top: 200px; */
-  /* padding-bottom: 70px; */
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 48px;
@@ -309,14 +307,14 @@ body {
 }
 
 .gallery {
-  padding-bottom: 200px;
+  margin-bottom: 200px;
 }
 
 .gallery_title {
   margin-bottom: 183px;
 }
 
-.gallery__filter-btn {
+.gallery__btn {
   margin-bottom: 50px;
 }
 
@@ -369,7 +367,7 @@ body {
   margin: 10px auto 200px;
   padding: 23px 91px;
   text-align: center;
-  width: 350px;
+  max-width: 350px;
   height: 70px;
   border: 2px solid #C4C4C4;
   font-weight: 400;
@@ -438,6 +436,10 @@ body {
   padding-top: 5px;
 }
 
+.slider-blog {
+  margin-bottom: 200px;
+}
+
 .slider-blog__title {
   margin-bottom: 160px;
 }
@@ -446,8 +448,14 @@ body {
   position: relative;
 }
 
+.slider-blog__item-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .slider-blog__item-img {
-  width: 100%;
+  max-width: none;
 }
 
 .slider_blog__item-bg {
@@ -467,12 +475,12 @@ body {
 
 .slider-blog__item-content {
   position: absolute;
-  width: 600px;
+  max-width: 600px;
   text-align: left;
   top: 314px;
   right: 0;
   margin-left: auto;
-  margin-right: 360px;
+  margin-right: 19%;
 }
 
 .slider-blog__item-title {
@@ -496,6 +504,7 @@ body {
   align-items: center;
   top: 700px;
   left: 50%;
+  transform: translateX(-50%);
 }
 
 .slick-dots li+li {
@@ -510,18 +519,25 @@ body {
   border-radius: 50%;
   font-size: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .slick-active button {
   background-color: #00B2A0;
 }
 
+.team {
+  margin-bottom: 200px;
+}
+
+.team__title {
+  margin-bottom: 183px;
+}
+
 .team__items {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-top: 113px;
-  margin-bottom: 200px;
 }
 
 .team__name {
@@ -536,13 +552,13 @@ body {
 
 .pricing {
   background-color: #F8F8F8;
-  padding-bottom: 200px;
+  padding: 200px 0;
 }
 
 .pricing__items {
   display: flex;
   justify-content: space-between;
-  margin-top: 113px;
+  margin-top: 183px;
 }
 
 ul.pricing__item {
@@ -599,29 +615,30 @@ li.pricing__item-num {
   margin-right: auto;
 }
 
-.connection .title {
-  padding: 0 0 200px;
+.connection,
+.connection__title {
+  margin-bottom: 200px;
 }
 
 .connection__inner {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
   margin-bottom: 200px;
 }
 
 .form {
-  flex: none;
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .form input,
 .form textarea {
-  display: block;
-  width: 570px;
   border: none;
   border-bottom: 2px solid #DADADA;
   letter-spacing: 0.6px;
-  margin-bottom: 32px;
-  padding-bottom: 18px;
   font-weight: 700;
   font-size: 20px;
   color: #242121;
@@ -634,14 +651,15 @@ li.pricing__item-num {
   font-size: 18px;
 }
 
-.form textarea {
+.form__text {
   min-height: 156px;
   resize: none;
-  margin: 53px 0 73px;
 }
 
 .form button {
-  padding: 24px 111px;
+  flex: none;
+  padding: 24px 0;
+  width: 350px;
   border: 2px solid #C4C4C4;
   background-color: transparent;
   font-weight: 400;
@@ -658,13 +676,12 @@ li.pricing__item-num {
 }
 
 .connection__contact {
-  flex: none;
-  width: 600px;
+  width: 50%;
   background-color: #F8F8F8;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  padding: 49px 220px 0 52px;
+  padding: 49px 0 50px 52px;
 }
 
 .messenger {
@@ -677,12 +694,12 @@ li.pricing__item-num {
 
 .address {
   margin-top: 65px;
+  max-width: 327px;
 }
 
 ul.connection__social {
   display: flex;
   justify-content: center;
-  margin-bottom: 200px;
   font-weight: 400;
   font-size: 24px;
 }
@@ -707,21 +724,28 @@ ul.connection__social {
 
 @media (max-width: 1600px) {
   .vertex {
-    padding: 0;
+    padding: 50px 0 0;
   }
 }
 
 @media (max-width: 1252px) {
+
   .about {
     padding: 120px 0 70px;
   }
 
   .about__title,
-  .school__title {
+  .school__title,
+  .vertex__title,
+  .gallery_title,
+  .slider-blog__title,
+  .team__title,
+  .connection__title {
     margin-bottom: 50px;
   }
 
-  .school {
+  .school,
+  .pricing {
     padding: 120px 0 100px;
   }
 
@@ -744,23 +768,29 @@ ul.connection__social {
     line-height: 80px;
   }
 
-  .gallery_title {
-    margin-bottom: 100px;
-  }
-
   .vertex,
   .gallery_add,
   .blockquote,
-  .gallery__video {
+  .gallery__video,
+  .slider-blog,
+  .gallery,
+  .team,
+  .connection,
+  .connection__inner {
     margin-bottom: 120px;
-  }
-
-  .gallery {
-    padding-bottom: 120px;
   }
 
   .gallery__content {
     column-gap: 25px;
+  }
+
+  .pricing__items {
+    column-gap: 20px;
+    margin-top: 50px;
+  }
+
+  .map {
+    margin: 120px 0 100px;
   }
 }
 
@@ -819,6 +849,23 @@ ul.connection__social {
 
   .blockquote__author {
     padding-left: 0;
+  }
+
+  .team__items {
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 920px) {
+
+
+  .pricing__items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing__item+.pricing__item {
+    margin-top: 50px;
   }
 }
 
@@ -883,6 +930,15 @@ ul.connection__social {
   .vertex__text {
     max-width: 100%;
   }
+
+  .slider-blog__item-content {
+    margin: 0 auto;
+    right: auto;
+  }
+
+  .connection__contact {
+    width: 80%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -898,6 +954,11 @@ ul.connection__social {
     left: 0;
   }
 
+  .blockquote {
+    font-size: 28px;
+    padding: 40px 20px;
+  }
+
   .gallery__number {
     flex-wrap: wrap;
     justify-content: center;
@@ -905,11 +966,30 @@ ul.connection__social {
 
   .gallery__number-item {
     width: 50%;
+    margin-bottom: 20px;
   }
 
-  .blockquote {
-    font-size: 28px;
-    padding: 0 20px;
+  .slider-blog__item-content {
+    padding: 0 10px;
+    max-width: 350px;
+  }
+
+  .slider-blog__item-title {
+    font-size: 35px;
+    line-height: 48px;
+  }
+
+  .team__items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team__item+.team__item {
+    margin-top: 50px;
+  }
+
+  .team__name {
+    margin-top: 15px;
   }
 }
 
@@ -928,5 +1008,14 @@ ul.connection__social {
 
   .school__item-title::before {
     display: none;
+  }
+
+  .gallery_add {
+    padding: 23px 50px;
+  }
+
+  ul.pricing__item {
+    padding: 15px 25px 0;
+    height: 500px;
   }
 }

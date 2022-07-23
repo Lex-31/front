@@ -622,16 +622,10 @@ li.pricing__item-num {
 
 .connection__inner {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 200px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-
 }
 
 .form input,
@@ -651,15 +645,30 @@ li.pricing__item-num {
   font-size: 18px;
 }
 
+.form__name,
+.form__tel,
 .form__text {
-  min-height: 156px;
+  width: 100%;
+}
+
+.form__name {
+  padding-bottom: 18px;
+  margin-bottom: 32px;
+}
+
+.form__tel {
+  padding-bottom: 18px;
+  margin-bottom: 53px;
+}
+
+.form__text {
+  padding-bottom: 100px;
+  margin-bottom: 73px;
   resize: none;
 }
 
 .form button {
-  flex: none;
-  padding: 24px 0;
-  width: 350px;
+  padding: 24px 110px;
   border: 2px solid #C4C4C4;
   background-color: transparent;
   font-weight: 400;
@@ -669,6 +678,7 @@ li.pricing__item-num {
   color: #242121;
   text-transform: uppercase;
   transition: color .3s;
+  margin-top: auto;
 }
 
 .form button:hover {
@@ -676,12 +686,16 @@ li.pricing__item-num {
 }
 
 .connection__contact {
-  width: 50%;
+  min-width: 50%;
   background-color: #F8F8F8;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
   padding: 49px 0 50px 52px;
+}
+
+.connection__contact a {
+  width: 100%;
 }
 
 .messenger {
@@ -939,6 +953,11 @@ ul.connection__social {
   .connection__contact {
     width: 80%;
   }
+
+  .connection__inner {
+    flex-wrap: wrap;
+  }
+
 }
 
 @media (max-width: 650px) {
@@ -991,6 +1010,10 @@ ul.connection__social {
   .team__name {
     margin-top: 15px;
   }
+
+  .connection__contact {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1017,5 +1040,11 @@ ul.connection__social {
   ul.pricing__item {
     padding: 15px 25px 0;
     height: 500px;
+  }
+
+  ul.connection__social {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 }

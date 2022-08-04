@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="container">
+
+      <div class="header-top">
+
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link" href=""></a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href=""></a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href=""></a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="logo" href="">
+          <img class="logo__img" src="" alt="">
+        </a>
+
+        <div class="header-control">
+
+          <button class="header-control__btn"></button>
+          <button class="header-control__btn"></button>
+          <button class="header-control__btn"></button>
+
+        </div>
+
+      </div>
+
+      <div class="header-content">
+
+        <form class="header-content__form" action="#">
+          <input class="header-content__text" type="text">
+          <input class="header-content__text" type="text">
+          <input class="header-content__text" type="text">
+          <button class="header-content__btn" type="submit"></button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section class="filters">
+
+    <div class="container">
+
+      <h2 class="filters__title">Filters</h2>
+      <span class="filters__num">2</span>
+
+      <div class="filter">
+
+        <h3 class="filter__title">Vehicle Type</h3>
+        <ul class="filter__list_active">
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="economy" checked>
+            <label class="filter__list-label" for="economy">Economy</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="compact">
+            <label class="filter__list-label" for="compact">Compact</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="midsize">
+            <label class="filter__list-label" for="midsize">Midsize</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="standard">
+            <label class="filter__list-label" for="standard">Standard</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="fullsize">
+            <label class="filter__list-label" for="fullsize">Fullsize</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="premium">
+            <label class="filter__list-label" for="premium">Premium</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="luxury">
+            <label class="filter__list-label" for="luxury">Luxury</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="convertible">
+            <label class="filter__list-label" for="convertible">Convertible</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="minivan">
+            <label class="filter__list-label" for="minivan">Minivan</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="sport-utility">
+            <label class="filter__list-label" for="sport-utility">Sport Utility</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="sports-car">
+            <label class="filter__list-label" for="sports-car">Sports car</label>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="filter">
+
+        <h3 class="filter__title">Price Range</h3>
+        <ul class="filter__list_active">
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="$50-100">
+            <label class="filter__list-label" for="$50-100">$50-100</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="$100-200">
+            <label class="filter__list-label" for="$100-200">$100-200</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="$200-500" checked>
+            <label class="filter__list-label" for="$200-500">$200-500</label>
+          </li>
+          <li class="filter__list-item">
+            <input class="filter__list-check" type="checkbox" id="$500-1000+">
+            <label class="filter__list-label" for="$500-1000+">$500-1000+</label>
+          </li>
+        </ul>
+
+      </div>
+      <div class="filter">
+
+        <h3 class="filter__title">Party Size</h3>
+        <ul class="filter__list"></ul>
+
+      </div>
+      <div class="filter">
+
+        <h3 class="filter__title">Specifications</h3>
+        <ul class="filter__list"></ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="content">
+
+    <div class="container">
+
+      <div class="content__header">
+
+        <h2 class="content__header-title">We found<span class="content__header-num">179</span> Cars at Munich airport
+        </h2>
+        <p class="sort">
+          <label class="sort__title" for="sort">Sort by</label>
+          <select class="sort__items" name="" id="sort">
+            <option class="sort__item" value="">Price: High to Low</option>
+          </select>
+        </p>
+
+      </div>
+
+      <div class="content__items">
+
+        <div class="content__item_active">
+
+          <img class="content__item-img" src="" alt="">
+
+          <div class="content__item-options options">
+            <h4 class="options__title">Mercedes-Benz E200/220 or similar</h4>
+            <p class="options__cabin">Sedan | PDAR</p>
+            <div class="package">
+              <p class="package__title">This package includes:</p>
+              <ul class="package__list">
+                <li class="package__list-item">Unlimited free kilometers incl.</li>
+                <li class="package__list-item">Sat Nav included</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content__item-price price">
+            <p class="price__title">Your Pricing</p>
+            <div class="price__wrapper">
+              <div class="price-day">
+                <p class="price-day__num">$36</p>
+                <p class="price-day__title">per day</p>
+              </div>
+              <img class="price__img" src="" alt="">
+              <div class="price-total">
+                <p class="price-total__num">$149</p>
+                <p class="price-total__title">total</p>
+              </div>
+            </div>
+            <button class="price__btn">Book Now</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+
+    <div class="footer__top">
+      <div class="container">
+        <a class="logo footer__logo" href="#">
+          <img class="logo__img" src="" alt="">
+        </a>
+        <div class="footer__top-inner">
+          <div class="footer-select">
+            <p class="footer-select__title">Site Language/Currency</p>
+            <select class="footer-select__language" name="" id="">
+              <option class="footer-select__item" value="">English</option>
+            </select>
+            <select class="footer-select__currency" name="" id="">
+              <option class="footer-select__item" value="">USD</option>
+            </select>
+          </div>
+          <div class="footer__menu-columns">
+            <div class="footer__menu-column">
+              <h6 class="footer__menu-title">Company</h6>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">About</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">Blog</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <h6 class="footer__menu-title">Legal</h6>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">Terms & Conditions</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">Privacy Policy</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">Legal Information</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <h6 class="footer__menu-title">Explore</h6>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">How it works?</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">Help</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href=""></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href=""></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href=""></a>
+            </li>
+          </ul>
+          <p class="footer__copy"></p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

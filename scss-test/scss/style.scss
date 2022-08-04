@@ -1,0 +1,39 @@
+@import 'reset';
+
+$default-color: #fcd1e1;
+$assent: #dce123;
+$assent-font: sans-serif;
+
+%bg {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  text-align: center;
+  padding: 0;
+}
+
+.about {
+  color: $assent;
+  font-family: $assent-font;
+  background-image: url();
+  @extend %bg;
+}
+
+.menu {
+  display: flex;
+
+  &__ul {
+    letter-spacing: normal;
+
+    li {
+      margin: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

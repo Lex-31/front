@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="body">
 
   <header class="header">
 
@@ -24,7 +24,7 @@
       <div class="container">
         <div class="header__top-inner">
 
-          <a class="logo" href="#">
+          <a class="logo" href="#body">
             <img class="logo__img" src="images/logo.svg" alt="Лого">
           </a>
 
@@ -37,12 +37,12 @@
               </svg>
             </button>
             <ul class="menu__list">
-              <li class="menu__list-item"><a class="menu__list-link" href="#">О нас</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">Услуги</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">Стоимость</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">Блог</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">Команда</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">Контакты</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#about">О нас</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#school">Услуги</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#pricing">Стоимость</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#slider-blog">Блог</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#team">Команда</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#connection">Контакты</a></li>
             </ul>
           </nav>
 
@@ -64,7 +64,7 @@
 
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <h2 class="title about__title">О ШКОЛЕ, О СЕРФИНГЕ, О КАНАРАХ</h2>
 
@@ -98,7 +98,7 @@
     </div>
   </section>
 
-  <section class="school">
+  <section class="school" id="school">
     <div class="container">
 
       <h2 class="title school__title">В ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
@@ -245,7 +245,7 @@
 
   </section>
 
-  <section class="slider-blog">
+  <section class="slider-blog" id="slider-blog">
     <h2 class="title slider-blog__title">БЛОГ</h2>
     <div class="slider-blog__inner">
 
@@ -362,7 +362,7 @@
     </div>
   </section>
 
-  <section class="team">
+  <section class="team" id="team">
     <div class="container">
 
       <h2 class="title team__title">НАША КОМАНДА</h2>
@@ -392,7 +392,7 @@
     </div>
   </section>
 
-  <section class="pricing">
+  <section class="pricing" id="pricing">
     <div class="container">
 
       <h2 class="title pricing__title">ПАКЕТЫ УСЛУГ</h2>
@@ -447,7 +447,7 @@
     </a>
   </div>
 
-  <section class="connection">
+  <section class="connection" id="connection">
     <div class="container">
 
       <h2 class="title connection__title">ОСТАВИТЬ ЗАЯВКУ</h2>
@@ -484,7 +484,7 @@
   </section>
 
   <footer class="footer">
-    <a href="#">
+    <a class="go-top" href="#body">
       <img class="logo__img" src="images/logo.svg" alt="Лого">
     </a>
 

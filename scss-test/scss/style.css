@@ -1,0 +1,34 @@
+.ul {
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  text-align: center;
+  padding: 0;
+}
+
+.about {
+  color: #dce123;
+  font-family: sans-serif;
+  background-image: url();
+}
+
+.menu {
+  display: flex;
+}
+.menu__ul {
+  letter-spacing: normal;
+}
+.menu__ul li {
+  margin: 0;
+}
+.menu a {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

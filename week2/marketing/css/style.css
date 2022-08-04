@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
 }
 
 *,
@@ -90,6 +91,15 @@ body {
   left: 0;
 }
 
+.header__top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
 .header__top-inner {
   padding-bottom: 29px;
   display: flex;
@@ -126,6 +136,7 @@ body {
 }
 
 .header__content {
+  padding-top: 100px;
   background-image: url('../images/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -764,6 +775,11 @@ ul.footer__social {
   .pricing,
   .connection {
     padding: 75px 0;
+  }
+
+  .header__top-inner {
+    padding-bottom: 5px;
+
   }
 
   .about__inner {

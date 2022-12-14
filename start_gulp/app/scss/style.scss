@@ -1,4 +1,10 @@
-.menu {
-  margin: 100px;
-  padding: 200px;
-}
+@import 'vars'; //переменные для цвета, шрифта и тд
+@import 'fonts'; //подключаем шрифты
+@import 'reset'; //сброс стилей
+@import 'global'; //глобальные стили
+
+
+
+
+
+@import 'media'; //медиа запросы

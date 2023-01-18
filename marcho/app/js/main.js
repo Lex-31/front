@@ -1,4 +1,35 @@
 $(function () {
+
+  $('.shop-content__filter-btn').on('click', function () {
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active');
+  });  //по клику изменяем цвет иконки сортировки по сетке или по линии
+
+  $('.button-list').on('click', function () {
+    $('.product-item').addClass('product-item--list');
+  });
+  $('.button-grid').on('click', function () {
+    $('.product-item').removeClass('product-item--list');
+  });
+
+  $('.select-style').styler();  //стилизация тега select
+
+  $('.filter-price__input').ionRangeSlider( //ползунок-фильтр цены
+    {
+      type: "double", //возможность выставлять min и max
+      hide_from_to: true, //скрыть надписи
+      hide_min_max: true, //скрыть надписи
+      onStart: function (data) {  //функция при открытии стр записывает цены в нужные html элементы
+        $('.filter-price__from').text(data.from);
+        $('.filter-price__to').text(data.to);
+      },
+      onChange: function (data) {  //записывает цены в html элементы при изменении положения ползунка
+        $('.filter-price__from').text(data.from);
+        $('.filter-price__to').text(data.to);
+      },
+    }
+  );
+
   $('.top-slider__inner').slick({
     dots: true, //включаем точки для перекл на слайдеры
     arrows: false, //отклбчем стрелочки переключения слайдеров

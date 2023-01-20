@@ -1,5 +1,20 @@
 $(function () {
 
+  $('.product-slide__thumb').slick({ //список превью слайдов
+    asNavFor: '.product-slide__big', //связываем два слайдера
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({ //большая картинка слайда
+    asNavFor: '.product-slide__thumb', //связываем два слайдера
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
   $('.shop-content__filter-btn').on('click', function () {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
@@ -12,7 +27,7 @@ $(function () {
     $('.product-item').removeClass('product-item--list');
   });
 
-  $('.select-style').styler();  //стилизация тега select
+  $('.select-style, .product-one__item-num').styler();  //стилизация тега select
 
   $('.filter-price__input').ionRangeSlider( //ползунок-фильтр цены
     {

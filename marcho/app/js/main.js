@@ -1,5 +1,14 @@
 $(function () {
 
+  $('.product-tabs__top-item').on('click', function (e) { //переключение вкладок, связываем табы с вкладками
+    e.preventDefault(); //отменяем стандартое действие при клике по ссылке
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  })
+
   $('.product-slide__thumb').slick({ //список превью слайдов
     asNavFor: '.product-slide__big', //связываем два слайдера
     focusOnSelect: true,

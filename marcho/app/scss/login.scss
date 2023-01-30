@@ -1,0 +1,8 @@
+@import 'vars'; //переменные для цвета, шрифта и тд
+@import 'fonts'; //подключаем шрифты
+@import 'reset'; //сброс стилей
+@import 'global'; //глобальные стили
+@import '../module/_header/header'; //подключаем модули
+@import '../module/_top/top';
+@import '../module/_login/login';
+@import '../module/_footer/footer';

@@ -89,7 +89,7 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles); //отслеживаем изменения в scss файлах и запускаем преобразование автоматически
+  watch(['app/**/*.scss'], styles); //отслеживаем изменения в scss файлах и запускаем преобразование автоматически
   watch(['app/*.njk'], nunjucks); //отслеживаем изменения в файлах nunjucks и запускаем преобразование
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);  //отслеживаем изменения в js файлах (кроме main.min.js) и запускаем преобразование
   watch(['app/**/*.html']).on('change', browserSync.reload); //отслеживаем все файлы html и перезагружаем при необходимости

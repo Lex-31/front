@@ -2,7 +2,11 @@ $(function () {
 
   $('.menu__btn').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
-  });
+  }); //верхнее меню бургер
+
+  $('.shop__filter-btn').on('click', function () {
+    $('.shop__filters').slideToggle();
+  }); //открытие-закрытие фильтров
 
   $('.blog-page__slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1"><g><path d="M 1.164062 6.382812 C 0.8125 6.722656 0.8125 7.277344 1.164062 7.621094 L 5.664062 11.996094 C 6.015625 12.335938 6.585938 12.335938 6.9375 11.996094 C 7.289062 11.652344 7.289062 11.097656 6.9375 10.757812 L 3.074219 7 L 6.9375 3.242188 C 7.289062 2.902344 7.289062 2.347656 6.9375 2.003906 C 6.585938 1.664062 6.011719 1.664062 5.660156 2.003906 L 1.160156 6.378906 Z M 1.164062 6.382812 "/></g></svg></button>',
@@ -29,9 +33,17 @@ $(function () {
   });
   $('.product-slide__big').slick({ //большая картинка слайда
     asNavFor: '.product-slide__thumb', //связываем два слайдера
-    draggable: false,
+    draggable: false, //запретить изменение свайпом
     arrows: false,
     fade: true,
+    responsive: [
+      {
+        breakpoint: 1051,
+        settings: {
+          draggable: true, //разрешить изменение свайпом
+        }
+      },
+    ],
   });
 
   $('.shop-content__filter-btn').on('click', function () {
@@ -41,9 +53,11 @@ $(function () {
 
   $('.button-list').on('click', function () {
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
   });
   $('.button-grid').on('click', function () {
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
   });
 
   $('.select-style, .product-one__item-num').styler();  //стилизация тега select

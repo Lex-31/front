@@ -5,3 +5,7 @@ marcho/node_modules/
 marcho/package-lock.json
 marcho/dist/
 marcho/app/css/*
+dmi/node_modules/
+dmi/package-lock.json
+leasing/node_modules/
+leasing/package-lock.json

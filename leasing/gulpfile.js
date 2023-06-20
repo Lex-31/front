@@ -129,12 +129,12 @@ function building() {  //выгрузка в папку dist для продак
   return src([  //собираем готовые файлы на локалке:
     'app/css/style.min.css',  //файл стилей
     'app/images/*.*',  //*файлы картинок
-    '!app/images/*.svg',  //*файлы svg не будем выгружать
-    'app/images/sprite.svg',  //*а файл svg спрайта будем выгружать
+    // '!app/images/*.svg',  //*файлы svg не будем выгружать
+    // 'app/images/sprite.svg',  //*а файл svg спрайта будем выгружать
     'app/fonts/*.*',  //файлы шрифтов
     'app/js/main.min.js',  //файл скриптов
     'app/**/*.html',  //все html файлы
-    '!app/images/stack/sprite.stack.html',  //*кроме файла примера svg спрайтов
+    '!app/images/stack/sprite.stack.html',  //*кроме файла html примера svg спрайтов
   ], { base: 'app', 'allowEmpty': true })  //корневая папка относительно которой нужно сохранить локацию папок и файлов, и разрешить
     .pipe(dest('dist'));  //выгружаем в папку dist для продакшн
 }
@@ -147,6 +147,7 @@ exports.scripts = scripts; //экспортируем функцию, чтобы
 exports.sprite = sprite; //экспортируем функцию, чтобы включать ее через консоль
 exports.watching = watching; //экспортируем функцию, чтобы включать ее через консоль
 exports.cleanDist = cleanDist; //экспортируем функцию, чтобы включать ее через консоль
+exports.building = building; //экспортируем функцию, чтобы включать ее через консоль
 
 exports.build = series(  //при запуске команды gulp build запускать в строгой последовательности сначала cleanDist - удаляем папку dist, затем images - уменьшаем изображения и закидываем в папку dist, затем building   - закидываем в папку dist остальные файлы для продакшн
   cleanDist,  //если папки dist нет в корне, то будет ругаться

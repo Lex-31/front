@@ -496,3 +496,20 @@ ul.how-does__list {
     gap: 40px;
   }
 }
+
+.error404 {
+  text-align: center;
+  padding: 100px 0 150px;
+  color: $black;
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    color: $blue;
+    text-decoration-line: underline;
+  }
+}

@@ -59,6 +59,24 @@ body {
 }
 
 .menu {
+  &__btn {
+    width: 30px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__btn span {
+    height: 2px;
+    background-color: $white;
+    width: 100%;
+  }
+
   &__list {
     display: flex;
     gap: 35px;
@@ -165,6 +183,10 @@ body {
     gap: 40px;
   }
 
+  &__item {
+    max-width: 270px;
+  }
+
   &__item-img {
     margin: 0 auto 30px;
   }
@@ -194,7 +216,7 @@ body {
   &__item {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
   }
 
@@ -231,6 +253,7 @@ ul.how-does__list {
   &__content {
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -255,6 +278,7 @@ ul.how-does__list {
 
   &__item-img {
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 
@@ -348,10 +372,13 @@ ul.how-does__list {
   }
 
   &__item-link {
-    display: inline-block;
+    display: block;
     color: $white;
     background-color: $blue;
-    padding: 4px 10px;
+    padding: 4px;
+    width: 80px;
+    height: 30px;
+    margin-left: auto;
   }
 }
 
@@ -513,3 +540,5 @@ ul.how-does__list {
     text-decoration-line: underline;
   }
 }
+
+@import "media";

@@ -1,1 +1,473 @@
-/*@import ''; //путь к дополнительным файлам css, без указания расширения .css */
+@import "normalize";
+@import "reset";
+@import "vars";
+
+/*@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Inter"),
+    url("../fonts/Inter-Regular.woff2")format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff");
+}*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  /*display: flex;
+  flex-direction: column;
+  height: 100vh;*/
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  font-weight: 600;
+
+  &__inner {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  font-size: 22px;
+  line-height: 10px;
+  cursor: pointer;
+  padding-right: 80px;
+  border-bottom: 8px solid $accent;
+}
+
+.menu {
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    gap: 15px;
+
+  }
+
+  &__list-link {
+    display: block;
+    line-height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background-color .5s;
+  }
+
+  &__list-link:hover {
+    background-color: $accent;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+    display: none;
+  }
+}
+
+.featured {
+  background-image: url('../images/blur.png');
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+.featured-left {
+  width: 790px;
+  margin: auto 0;
+  padding-bottom: 140px;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 800;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  &__girl {
+    position: absolute;
+    top: 50px;
+    left: 320px;
+    z-index: 5;
+  }
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: $accent;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: $black;
+  }
+}
+
+.featured-right {
+  width: 420px;
+
+  &__quote {
+    padding: 40px;
+    margin-top: 200px;
+    margin-bottom: 130px;
+    font-style: italic;
+    border: 2px $white solid;
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 0.32);
+    position: relative;
+  }
+
+  &__quote::before {
+    content: url('../images/quote-icon.svg');
+    position: absolute;
+    top: 0;
+  }
+
+  &__video {
+    padding-left: 110px;
+    position: relative;
+
+  }
+
+  &__video div {
+    /*временно, сюда вставить фрейм видео*/
+    width: 350px;
+    height: 220px;
+    position: relative;
+    margin-left: -40px;
+    z-index: 6;
+  }
+
+  &__video::before {
+    content: "";
+    background-color: $accent;
+    position: absolute;
+    top: 90px;
+    left: -140px;
+    height: 407px;
+    width: 816px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    padding: 20px 0;
+    position: relative;
+  }
+
+  &__video p {
+    line-height: 28px;
+    position: relative;
+  }
+}
+
+.featured-bottom {
+  flex: 0 0 auto;
+  margin-bottom: 50px;
+
+  .featured-bottom__numbers {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin-top: -100px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: solid 1px $white;
+    box-shadow: 1px 6px 38px 6px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 6;
+  }
+
+  &__numbers li {
+    text-align: center;
+    position: relative;
+    width: 150px;
+  }
+
+  &__numbers li + li::before {
+    content: "";
+    position: absolute;
+    background-color: $grey;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: -35px;
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 39px;
+    padding-bottom: 20px;
+    color: $accent;
+  }
+
+  &__text {
+    margin: 0 auto;
+  }
+}
+
+.about {
+  margin-bottom: 100px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.photo-section,
+.about-info {
+  flex: 0 0 auto;
+  width: 50%;
+  position: relative;
+}
+
+.photo-section {
+  height: 510px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $accent;
+    height: 420px;
+    width: 450px;
+    top: 50px;
+    left: 30px;
+  }
+
+  & img {
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__one {
+    border-right: 15px solid $white;
+    border-bottom: 15px solid $white;
+    width: 160px;
+    height: 160px;
+  }
+
+  &__two {
+    width: 230px;
+    height: 230px;
+    right: 40px;
+  }
+
+  &__three {
+    border-right: 15px solid $white;
+    border-top: 15px solid $white;
+    width: 280px;
+    height: 280px;
+    bottom: 0;
+  }
+}
+
+.about-info {
+  & h2 {
+    width: 90%;
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border: 35px solid $white;
+    position: absolute;
+    top: -60px;
+    left: -63px;
+    z-index: 3;
+  }
+
+  & p {
+    line-height: 28px;
+    padding: 100px 0 40px 70px;
+    z-index: 4;
+  }
+
+  & a {
+    margin-left: 70px;
+  }
+}
+
+.benefit {
+  margin-bottom: 100px;
+
+  &__title {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 40px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  width: 25%;
+  padding: 25px;
+  box-shadow: 2px 31px 61px -14px rgb(0 0 0 / 14%);
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+  }
+
+  &__title a {
+    margin-left: -38px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-right: solid 1px $accent;
+    border-bottom: solid 1px $accent;
+    display: block;
+    background-color: $white;
+    transition: all .5s;
+    cursor: pointer;
+  }
+
+  &__title a:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  & p {
+    font-weight: 300;
+  }
+}
+
+.my-program {
+  background-image: url('../images/blur-my-program.png');
+
+  &__inner {
+    display: flex;
+  }
+}
+
+.program-left {
+  width: 25%;
+  padding: 0 12px;
+}
+
+.program-centre {
+  width: 50%;
+  padding: 0 12px;
+  margin-top: 40px;
+}
+
+.program-right {
+  width: 25%;
+  padding: 0 12px;
+}
+
+.program {
+  &__title h2 {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  &__title a {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    border: 2px solid white;
+    box-shadow: 2px 31px 61px -14px rgb(0 0 0 / 14%);
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+
+  &__item p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+.program-icon {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+  & img {
+    border: solid 1px white;
+    padding: 15px;
+    border-radius: 15px;
+  }
+}
+
+.calculator {
+  background-color: $black;
+  padding-top: 100px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__photo {
+    width: 50%;
+    height: 745px;
+    position: relative;
+  }
+
+  &__photo img {
+    max-width: none;
+  }
+
+  &__bmi {
+    width: 50%;
+    padding: 40px;
+    background-color: $white;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+@import "media";

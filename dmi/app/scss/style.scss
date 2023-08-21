@@ -60,7 +60,7 @@ body {
     line-height: 40px;
     padding: 0 15px;
     cursor: pointer;
-    transition: background-color .5s;
+    transition: background-color .3s;
   }
 
   &__list-link:hover {
@@ -98,6 +98,7 @@ body {
     font-size: 50px;
     line-height: 60px;
     font-weight: 800;
+    letter-spacing: 1.2px;
     width: 70%;
     margin-bottom: 30px;
   }
@@ -404,6 +405,7 @@ body {
     font-size: 34px;
     line-height: 44px;
     font-weight: 800;
+    letter-spacing: 1.2px;
     margin-bottom: 30px;
   }
 
@@ -462,12 +464,387 @@ body {
     z-index: 1;
   }
 
+  &__bmi p {
+    line-height: 28px;
+  }
+
   &__title {
     font-size: 34px;
     line-height: 44px;
     font-weight: 800;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
+    margin-bottom: 30px;
   }
+
+  &__wrapper {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.calc-bmi {
+  width: 60%;
+  margin-top: 20px;
+  padding-right: 10px;
+
+  &__tabs {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__tab {
+    width: 50%;
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__radio:checked + .calc-bmi__span {
+    background-color: $accent;
+
+    &:hover {
+      background-color: #deff4b;
+    }
+  }
+
+  &__span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: solid 1px $accent;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #deff4b;
+    }
+  }
+
+  &__input {
+    font-size: 18px;
+    outline: none;
+    border: solid 1px #c7c7c7;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  &__input:active,
+  .calc-bmi__input:focus {
+    border-color: #999;
+  }
+
+  &__input::placeholder {
+    color: #c7c7c7;
+    opacity: 1;
+  }
+
+  &__select {
+    font-size: 18px;
+    outline: none;
+    border: solid 1px #c7c7c7;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 35px 15px 15px;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__select::-ms-expand {
+    /* appearance for IE */
+    display: none;
+  }
+
+  &__options {
+    position: relative;
+  }
+
+  &__options::after {
+    content: "";
+    right: 8%;
+    top: 42%;
+    height: 12px;
+    width: 12px;
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    display: block;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__select:active,
+  .calc-bmi__select:focus {
+    border-color: #999;
+  }
+
+  &__btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    width: 100%;
+    background-color: $black;
+    border: none;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: background-color .5s;
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
+
+.result {
+  width: 40%;
+  text-align: center;
+  border: 1px solid #f2f2f2;
+  padding: 120px 10px;
+  margin-top: 20px;
+
+  & img {
+    display: inline;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #c7c7c7;
+  }
+}
+
+.footer {
+  background-color: $black;
+  color: $white;
+}
+
+.footer-title {
+  padding: 100px 0;
+  border-bottom: solid 1px $grey;
+  text-align: center;
+
+  & h3 {
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 70%;
+    margin: 0 auto 30px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__form input {
+    width: 320px;
+    margin-right: 40px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color: $white;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  &__form input::placeholder {
+    color: $black;
+    opacity: .6;
+  }
+
+  &__form button {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $accent;
+    border: solid 1px $accent;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: background-color .5s;
+  }
+
+  &__form button:hover {
+    background-color: $black;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__span {
+    display: inline-block;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  &__checkbox + .footer-title__span::before {
+    content: "\2714";
+    border: 0.1em solid white;
+    border-radius: 4px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: sub;
+    color: transparent;
+    transition: color .2s;
+  }
+
+  &__checkbox:checked + .footer-title__span::before {
+    border: none;
+    color: $accent;
+    vertical-align: top;
+  }
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 100px 0 65px;
+  border-bottom: solid 1px $grey;
+
+  &__row-1 .logo {
+    margin-right: auto;
+    color: $white;
+  }
+
+  &__row-1 p {
+    line-height: 28px;
+    width: 80%;
+    padding: 35px 0;
+  }
+}
+
+.social-icons {
+  display: flex;
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 20px;
+    transition: border-color .3s;
+    cursor: pointer;
+  }
+
+  & svg {
+    height: 18px;
+    width: 18px;
+
+    path {
+      fill: $white;
+      transition: fill .3s;
+
+    }
+  }
+
+  & a:hover {
+    border-color: $accent;
+
+    path {
+      fill: $accent;
+    }
+  }
+}
+
+.footer-menu__row-2 h5,
+.footer-menu__row-3 h5 {
+  font-size: 18px;
+  line-height: 28px;
+  color: $grey;
+  font-weight: 400;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  & li {
+    display: block;
+    width: 50%;
+    margin-bottom: 35px;
+  }
+
+  & a {
+    line-height: 28px;
+    color: $white;
+    transition: color .3s;
+    cursor: pointer;
+  }
+
+  & a:hover {
+    color: $accent;
+  }
+}
+
+.footer-menu__contacts {
+  line-height: 28px;
+
+  & li {
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
+
+  & .address svg,
+  & .phone svg,
+  & .email svg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: $accent;
+    margin-right: 20px;
+    padding: 5px;
+  }
+}
+
+.footer-rights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 28px;
+  color: $grey;
+  padding: 40px 0;
+
+  &__privacy {
+    display: flex;
+  }
+
+  & a {
+    margin-left: 40px;
+    cursor: pointer;
+  }
+
 }
 
 @import "media";

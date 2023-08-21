@@ -164,6 +164,42 @@
         </div>
         <div class="calculator__bmi">
           <h2 class="calculator__title">РАССЧИТАЙТЕ СВОЙ ИМТ</h2>
+          <p>Метус аликвам элейфенд ми ин нуль посуэре солликитудин аликвам. Морби тристик сенектус и Нетус и.</p>
+          <div class="calculator__wrapper">
+            <div class="calc-bmi">
+              <form method="get" action="">
+
+                <div class="calc-bmi__tabs">
+                  <label class="calc-bmi__tab" id="female-tab" for="female">
+                    <input class="calc-bmi__radio" id="female" name="group" type="radio" checked><span
+                      class="calc-bmi__span">Женщина</span></label>
+                  <label class="calc-bmi__tab" id="male-tab" for="male">
+                    <input class="calc-bmi__radio" id="male" name="group" type="radio"><span
+                      class="calc-bmi__span">Мужчина</span></label>
+                </div>
+
+                <div class="calc-bmi__panel">
+                  <input class="calc-bmi__input" type="number" name="Age" placeholder="Возраст">
+                  <input class="calc-bmi__input" type="number" name="Weight" placeholder="Вес">
+                  <input class="calc-bmi__input" type="number" name="Height" placeholder="Рост">
+                  <div class="calc-bmi__options">
+                    <select class="calc-bmi__select" name="Advice">
+                      <option value="" checked>Выбор 1</option>
+                      <option value="">Выбор 2</option>
+                      <option value="">Выбор 3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button class="calc-bmi__btn">РАССЧИТАТЬ</button>
+              </form>
+            </div>
+
+            <div class="result">
+              <img src="images/scale-icon.svg" alt="Scale Icon">
+              <p>Заполните форму для расчета калорий для похудения</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

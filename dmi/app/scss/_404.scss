@@ -1,0 +1,57 @@
+.error {
+  overflow: hidden;
+  padding: 50px 0 100px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header {
+    width: 50%;
+    position: relative;
+  }
+
+  &__header span {
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 225px;
+    color: $accent;
+    z-index: -1;
+    position: absolute;
+    left: 50px;
+  }
+
+  &__header h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 150px;
+  }
+
+  &__header p {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 50%;
+    position: relative;
+  }
+
+  &__img::after {
+    content: '';
+    background-color: $accent;
+    width: 540px;
+    height: 500px;
+    z-index: -1;
+    position: absolute;
+    bottom: -50px;
+    left: 230px;
+  }
+
+  &__img img {
+    width: 100%;
+    height: 100%;
+  }
+}

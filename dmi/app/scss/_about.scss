@@ -1,0 +1,325 @@
+.about-my {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    width: 50%;
+  }
+
+  &__content h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 40px;
+  }
+
+  &__content p {
+    line-height: 28px;
+    color: $grey;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  &__photos {
+    width: 50%;
+    position: relative;
+  }
+
+  &__photos::before {
+    content: '';
+    height: 290px;
+    width: 840px;
+    background-color: $accent;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    z-index: -1;
+  }
+
+  &__photo-one {
+    width: 380px;
+    margin-top: 40px;
+    z-index: 1;
+  }
+
+  &__photo-two {
+    position: absolute;
+    border: solid 20px $white;
+    width: 190px;
+    z-index: 2;
+    top: 0;
+    right: 90px;
+  }
+}
+
+ul.crumbs {
+  display: flex;
+  margin-bottom: 40px;
+
+  & a {
+    display: inline-block;
+    color: $black;
+  }
+
+  & span {
+    display: inline-block;
+    color: #c7c7c7;
+  }
+
+  & span::before {
+    content: url('../images/angles-right.svg');
+    display: inline-block;
+    width: 15px;
+    height: 22.5px;
+    margin: 0 10px;
+    vertical-align: bottom;
+  }
+}
+
+.experience {
+  background-image: url('../images/blur-experience.png');
+  margin-bottom: 100px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  &__video {
+    width: 60%;
+  }
+
+  &__content {
+    width: 40%;
+    padding: 30px 0;
+  }
+
+  &__content h2 {
+    text-transform: uppercase;
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    background-color: $white;
+    border: 35px solid $white;
+    width: 100%;
+    margin-left: -60px;
+    margin-bottom: 30px;
+  }
+
+  &__content p {
+    line-height: 28px;
+    color: $grey;
+    margin-left: 70px;
+    margin-bottom: 40px;
+  }
+
+  &__content a {
+    margin-left: 70px;
+  }
+}
+
+.progress {
+  display: flex;
+
+  &__header,
+  &__column {
+    width: calc(100%/3);
+    padding: 0 15px;
+  }
+
+  &__header h2 {
+    text-transform: uppercase;
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+  }
+
+  &__header p {
+    line-height: 28px;
+    color: $grey;
+    margin-bottom: 50px;
+  }
+
+  &__list h4 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  &__list h4::before {
+    content: '';
+    display: block;
+    background-color: $accent;
+    width: 12px;
+    height: 12px;
+    border-bottom: solid 3px $black;
+    border-right: solid 3px $black;
+    left: 0;
+    top: 10px;
+    position: absolute;
+  }
+
+  &__card-white,
+  &__card-transparent {
+    background-color: $white;
+    border: 1px solid $white;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    & div {
+      font-size: 50px;
+      line-height: 60px;
+      font-weight: 700;
+      color: $accent;
+      padding-right: 20px;
+    }
+
+    & h3 {
+      font-size: 24px;
+      line-height: 34px;
+      font-weight: 700;
+      color: $grey;
+    }
+  }
+
+  &__card-transparent {
+    background-color: transparent;
+  }
+}
+
+.story {
+  background-image: url('../images/blur-story.png');
+  margin-bottom: 100px;
+  display: flex;
+
+  &__photo {
+    width: 50%;
+  }
+
+  &__photo img {
+    width: 100%;
+    height: 1600px;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 0 50px;
+  }
+
+  &__content h2 {
+    text-transform: uppercase;
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+  }
+
+  &__content > p {
+    line-height: 28px;
+    color: $grey;
+    width: 70%;
+  }
+
+  &__years {
+    padding-top: 40px;
+    width: 85%;
+  }
+
+  &__years h6 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  &__years span {
+    font-size: 36px;
+    font-weight: 700;
+    color: $accent;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  &__years span::before {
+    content: '';
+    position: absolute;
+    background-color: $accent;
+    width: 25px;
+    height: 25px;
+    border: solid 5px $white ;
+    border-radius: 50%;
+    left: -80px;
+    top: 25%;
+  }
+
+  &__years span::after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid $accent;
+    padding-right: 50px;
+    left: -55px;
+    top: 50%;
+    line-height: 0;
+  }
+
+  &__years p {
+    line-height: 28px;
+    color: $grey;
+  }
+}
+
+.cert {
+  margin-bottom: 100px;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__header,
+  &__item {
+    width: calc(100%/3);
+  }
+
+  &__item {
+    padding: 12px;
+  }
+
+  &__header h2 {
+    text-transform: uppercase;
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+  }
+
+  &__header p {
+    line-height: 28px;
+    color: $grey;
+  }
+
+  &__item img {
+    border: 20px solid white;
+    box-shadow: -1px 3px 19px -6px rgb(0 0 0 / 10%);
+    width: 100%;
+  }
+}

@@ -139,11 +139,13 @@ function cleanDist() {  //очистка продакшн папки dist
 function building() {  //выгрузка в папку dist для продакшн
   return src([  //собираем готовые файлы на локалке:
     'app/css/style.min.css',  //файл стилей
+    'app/video/*.*', //*видео и превьюшки в jpg
     'app/images/*.*',  //*файлы картинок
     // '!app/images/*.svg',  //*файлы svg не будем выгружать
     // 'app/images/sprite.svg',  //*а файл svg спрайта будем выгружать
     'app/fonts/*.*',  //файлы шрифтов
     'app/js/main.min.js',  //файл скриптов
+    'app/js/swiper.js',  //файл скриптов
     // 'app/**/*.html',  //все html файлы
     'app/*.html',  //html основные файлы
     // '!app/images/stack/sprite.stack.html',  //*кроме файла html примера svg спрайтов

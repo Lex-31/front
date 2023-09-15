@@ -1,0 +1,131 @@
+.blog-header {
+  background-image: url('../images/blur-blog-header.png');
+
+  &__inner {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+  }
+
+  &__inner h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__inner p {
+    line-height: 28px;
+    color: $grey;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.blog-items {
+  padding-bottom: 50px;
+}
+
+.blog-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+
+  &__photo {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__photo img {
+    transition: transform .5s;
+  }
+
+  &__photo img:hover {
+    transform: scale(1.1);
+  }
+
+  &__photo div {
+    top: 20px;
+    left: 40px;
+    position: absolute;
+  }
+
+  &__photo span {
+    display: inline-block;
+    font-size: 14px;
+    border: solid 1px $accent;
+    background-color: $black;
+    color: $white;
+    padding: 10px 20px;
+  }
+
+  &__content {
+    width: 50%;
+  }
+
+  &__content h3 a {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    background-color: $white;
+    padding: 30px;
+    margin-left: -60px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    transition: color .3s;
+  }
+
+  &__content h3 a:hover {
+    color: $accent;
+  }
+
+  &__content p {
+    line-height: 28px;
+    color: $grey;
+    margin-bottom: 20px;
+    padding-left: 30px;
+  }
+
+  &__content .post__next {
+    display: inline-block;
+    padding-left: 30px;
+  }
+
+  &__details {
+    font-size: 14px;
+    line-height: 28px;
+    border-top: solid 1px $black;
+    padding-top: 10px;
+    margin-left: 30px;
+  }
+
+  &__detail {
+    display: inline-block;
+    padding-left: 0;
+    margin-right: 30px;
+  }
+
+  &__detail::before {
+    content: url("../images/calendar.svg");
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+
+  &__share::before {
+    content: url("../images/share.svg");
+  }
+
+  &__comments::before {
+    content: url("../images/comments.svg");
+  }
+}

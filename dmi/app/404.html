@@ -66,7 +66,7 @@
 
   <div class="container">
 
-    <div class="footer-title">
+    <div class="footer-title" id="my-form">
 
       <h3>ПОДПИСАТЬСЯ НА РАССЫЛКУ</h3>
 
@@ -76,17 +76,17 @@
 
         ли это?</p>
 
-      <form class="footer-title__form">
+      <form class="footer-title__form" id="form" method="POST" action="https://formspree.io/f/xeqbrpdn">
 
-        <input type="text" name="Your name" placeholder="Ваше имя">
+        <input type="text" name="name" placeholder="Ваше имя">
 
-        <input type="email" name="Email" placeholder="Ваш Email">
+        <input type="email" name="email" placeholder="Ваш Email">
 
-        <button>ПОДПИСАТЬСЯ</button>
+        <button id="submitButton" type="submit" disabled>ПОДПИСАТЬСЯ</button>
 
         <label for="subscribe">
 
-          <input class="footer-title__checkbox" type="checkbox" name="" id="subscribe">
+          <input class="footer-title__checkbox" type="checkbox" id="subscribe">
 
           <span class="footer-title__span">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих
 
@@ -94,9 +94,19 @@
 
             данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</span>
 
-          <p style="display: none;">Согласие на обработку персональных данных
+        </label>
 
-            Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года свободно,
+      </form>
+
+      <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+          <p>Согласие на обработку персональных данных
+
+            Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года
+
+            свободно,
 
             своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных ИП
 
@@ -124,7 +134,9 @@
 
             средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение,
 
-            уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий,
+            уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных
+
+            действий,
 
             предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными
 
@@ -148,15 +160,23 @@
 
             электронный адрес damedvedev@atmapro.ru. В случае отзыва мною согласия на обработку персональных данных
 
-            Оператор вправе продолжить обработку персональных данных без моего согласия при наличии оснований, указанных
+            Оператор вправе продолжить обработку персональных данных без моего согласия при наличии оснований,
+
+            указанных
 
             в пунктах 2 – 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О
 
             персональных данных» от 27.07.2006 г.</p>
 
-        </label>
+          <p>Подтверждаете согласие на обработку персональных данных?</p>
 
-      </form>
+          <button id="confirmButton">ДА</button>
+
+          <button id="cancelButton">НЕТ</button>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -172,7 +192,7 @@
 
         <ul class="social-icons">
 
-          <li><a href="#">
+          <li><a href="#" target="_blank">
 
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
 
@@ -184,7 +204,7 @@
 
             </a></li>
 
-          <li><a href="#">
+          <li><a href="https://www.instagram.com/anna_dmi_fit/" target="_blank">
 
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 
@@ -196,7 +216,7 @@
 
             </a></li>
 
-          <li><a href="#">
+          <li><a href="#" target="_blank">
 
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 

@@ -115,6 +115,70 @@ color.addEventListener('change', () => {
 //   };
 // });
 
+// Модальное окно checkbox
+const modal = document.getElementById('modal');
+const checkbox = document.getElementById('subscribe');
+const confirmButton = document.getElementById('confirmButton');
+const cancelButton = document.getElementById('cancelButton');
+
+checkbox.checked = false; // по умолч при загрузке страницы выключен checkbox
+
+const disablePageScroll = () => { // Функция для блокировки прокрутки фоновой страницы
+  document.body.classList.add('modal-open');
+}
+
+const enablePageScroll = () => { // Функция для разблокировки прокрутки фоновой страницы
+  document.body.classList.remove('modal-open');
+}
+
+checkbox.addEventListener('click', () => {
+  modal.style.display = 'block'; // При клике на Checkbox, показываем модальное окно
+  disablePageScroll(); //блокируем прокрутку фоновой страницы
+});
+
+confirmButton.addEventListener('click', () => {
+  checkbox.checked = true; // Если пользователь подтвердил выбор, отмечаем Checkbox
+  modal.style.display = 'none'; //и закрываем модальное окно
+  enablePageScroll(); //разблокировка прокрутки фоновой страницы
+});
+
+cancelButton.addEventListener('click', () => {
+  checkbox.checked = false; // Если пользователь отменил выбор, снимаем отметку с Checkbox
+  modal.style.display = 'none'; //и закрываем модальное окно
+  enablePageScroll(); //разблокировка прокрутки фоновой страницы
+});
+
+// Pop-up фото увеличение
+const certItems = document.querySelectorAll('.cert__item'); //берем все фото
+certItems.forEach((certItem) => { //перебираем их с помощью цикла
+  certItem.addEventListener('click', function () { //навешиваем на каждую событие клика
+    this.classList.toggle('pop-up'); //добавлять-удалять класс при клике 
+    if (this.classList.contains('pop-up')) { //проверяем наличие класса, если есть класс...
+      disablePageScroll(); //блокируем прокрутку фоновой страницы
+    } else { //если нет класса...
+      enablePageScroll(); //разблокировка прокрутки фоновой страницы
+    }
+  });
+});
+
+
+// Form согласие на обработку
+const form = document.getElementById("form");
+//const checkbox = document.getElementById("subscribe"); - объявлена выше
+const submitButton = document.getElementById("submitButton");
+
+checkbox.addEventListener("change", () => {
+  // Если чекбокс отмечен, активируем кнопку submit, в противном случае делаем её неактивной
+  submitButton.disabled = !checkbox.checked; //если чекбокс отмечен, то неактивную кнопку делаем активной!, если чекбокс неотмечен, то отставляем кнопку неактивной
+});
+
+form.addEventListener("submit", (event) => {
+  if (!checkbox.checked) {
+    event.preventDefault(); // Отменяем отправку формы, если чекбокс не отмечен
+  }
+});
+
+
 //слайдер
 const swiper = new Swiper(".swiper", { //плагин swiper вешаем на класс div элемента 
   loop: true, //бесконечный слайд

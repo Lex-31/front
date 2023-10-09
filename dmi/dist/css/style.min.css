@@ -1147,43 +1147,6 @@ a {
   background-color: transparent;
 }
 
-/*$accent: #237723;*/
-.card p {
-  font-family: "OpenSans-Light", sans-serif;
-  font-weight: 300;
-}
-
-.footer-menu__row-2 h5,
-.footer-menu__row-3 h5, body {
-  font-family: "OpenSans-Regular", sans-serif;
-  font-weight: 400;
-}
-
-.slide__quote, .featured-right__quote {
-  font-family: "OpenSans-Italic", sans-serif;
-  font-weight: 400;
-}
-
-.footer-title__form button, .person-info h5, .post__date, .post__next, .calc-bmi__btn, .program-icon, .button {
-  font-family: "OpenSans-Medium", sans-serif;
-  font-weight: 500;
-}
-
-.header {
-  font-family: "OpenSans-SemiBold", sans-serif;
-  font-weight: 600;
-}
-
-.ready__content h6, .post__title, .card__title, .featured-bottom__number, .featured-right__title {
-  font-family: "OpenSans-Bold", sans-serif;
-  font-weight: 700;
-}
-
-.ready__content h2, .feedback__title, .blog__title, .calculator__title, .program__title h2, .benefit__title, .about-info h2, .featured-left__title {
-  font-family: "OpenSans-ExtraBold", sans-serif;
-  font-weight: 800;
-}
-
 @font-face {
   font-family: "OpenSans-Light";
   font-weight: 300;
@@ -1233,6 +1196,43 @@ a {
   font-display: swap;
   src: local("OpenSans-ExtraBold"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff");
 }
+/*$accent: #237723;*/
+.card p {
+  font-family: "OpenSans-Light", sans-serif;
+  font-weight: 300;
+}
+
+.footer-menu__row-2 h5,
+.footer-menu__row-3 h5, body {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.slide__quote, .featured-right__quote {
+  font-family: "OpenSans-Italic", sans-serif;
+  font-weight: 400;
+}
+
+.progress__list h4, .footer-title button, .person-info h5, .post__date, .post__next, .calc-bmi__btn, .program-icon, .button {
+  font-family: "OpenSans-Medium", sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  font-family: "OpenSans-SemiBold", sans-serif;
+  font-weight: 600;
+}
+
+.story__years span, .progress__card-white h3, .progress__card-transparent h3, .progress__card-white div, .progress__card-transparent div, .ready__content h6, .post__title, .card__title, .featured-bottom__number, .featured-right__title {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+}
+
+.cert__header h2, .story__content h2, .progress__header h2, .experience__content h2, .about-my__content h2, .ready__content h2, .feedback__title, .blog__title, .calculator__title, .program__title h2, .benefit__title, .about-info h2, .featured-left__title {
+  font-family: "OpenSans-ExtraBold", sans-serif;
+  font-weight: 800;
+}
+
 :root {
   --accent-color: #70b018;
 }
@@ -1379,7 +1379,6 @@ body {
   z-index: 4;
 }
 .featured-right__video-inner {
-  /*временно, сюда вставить фрейм видео*/
   display: inline-block;
   position: relative;
   margin-left: -40px;
@@ -1683,11 +1682,16 @@ body {
   font-size: 24px;
   line-height: 34px;
   margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
 }
 .program-icon img {
-  border: solid 1px white;
-  padding: 15px;
-  border-radius: 15px;
+  padding: 5px;
 }
 
 .calculator {
@@ -2211,7 +2215,7 @@ body {
   color: #000000;
   opacity: 0.6;
 }
-.footer-title__form button {
+.footer-title button {
   text-transform: uppercase;
   color: #ffffff;
   background-color: var(--accent-color);
@@ -2221,7 +2225,7 @@ body {
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-.footer-title__form button:hover {
+.footer-title button:hover {
   background-color: #000000;
 }
 .footer-title__checkbox {
@@ -2251,6 +2255,38 @@ body {
   border: none;
   color: var(--accent-color);
   vertical-align: top;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+.modal p {
+  width: 100%;
+}
+.modal button {
+  margin-right: 20px;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 .footer-menu {
@@ -2394,12 +2430,12 @@ body {
 
 .about-my {
   margin-top: 20px;
-  margin-bottom: 100px;
   overflow: hidden;
 }
 .about-my__inner {
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
 }
 .about-my__content {
   width: 50%;
@@ -2408,7 +2444,6 @@ body {
   text-transform: uppercase;
   font-size: 50px;
   line-height: 60px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   margin-bottom: 40px;
 }
@@ -2426,24 +2461,24 @@ body {
   content: "";
   height: 290px;
   width: 840px;
-  background-color: #70b018;
+  background-color: var(--accent-color);
   position: absolute;
-  bottom: 0;
-  left: 10px;
+  bottom: -20px;
+  left: 50px;
   z-index: -1;
 }
 .about-my__photo-one {
-  width: 380px;
+  width: 63%;
   margin-top: 40px;
   z-index: 1;
 }
 .about-my__photo-two {
   position: absolute;
   border: solid 20px #ffffff;
-  width: 190px;
+  width: 31%;
   z-index: 2;
   top: 0;
-  right: 90px;
+  left: 45%;
 }
 
 ul.crumbs {
@@ -2477,32 +2512,41 @@ ul.crumbs span::before {
   margin-bottom: 100px;
 }
 .experience__video {
-  width: 60%;
+  width: 50%;
+}
+.experience__video .featured-right__video-inner {
+  margin-left: 0;
+}
+.experience__video video {
+  width: auto;
+  height: 90vh;
 }
 .experience__content {
-  width: 40%;
+  width: 50%;
   padding: 30px 0;
 }
 .experience__content h2 {
   text-transform: uppercase;
   font-size: 34px;
   line-height: 44px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   background-color: #ffffff;
   border: 35px solid #ffffff;
   width: 100%;
-  margin-left: -60px;
   margin-bottom: 30px;
 }
 .experience__content p {
   line-height: 28px;
   color: #4c4c4c;
-  margin-left: 70px;
+  margin-left: 50px;
   margin-bottom: 40px;
 }
 .experience__content a {
-  margin-left: 70px;
+  margin-left: 50px;
+}
+
+.about-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .progress {
@@ -2516,7 +2560,6 @@ ul.crumbs span::before {
   text-transform: uppercase;
   font-size: 34px;
   line-height: 44px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   margin-bottom: 30px;
 }
@@ -2529,14 +2572,13 @@ ul.crumbs span::before {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 20px;
-  font-weight: 500;
   padding-left: 30px;
   position: relative;
 }
 .progress__list h4::before {
   content: "";
   display: block;
-  background-color: #70b018;
+  background-color: var(--accent-color);
   width: 12px;
   height: 12px;
   border-bottom: solid 3px #000000;
@@ -2556,14 +2598,12 @@ ul.crumbs span::before {
 .progress__card-white div, .progress__card-transparent div {
   font-size: 50px;
   line-height: 60px;
-  font-weight: 700;
-  color: #70b018;
+  color: var(--accent-color);
   padding-right: 20px;
 }
 .progress__card-white h3, .progress__card-transparent h3 {
   font-size: 24px;
   line-height: 34px;
-  font-weight: 700;
   color: #4c4c4c;
 }
 .progress__card-transparent {
@@ -2582,6 +2622,7 @@ ul.crumbs span::before {
   width: 100%;
   height: 1600px;
   object-fit: cover;
+  object-position: right;
 }
 .story__content {
   width: 50%;
@@ -2591,7 +2632,6 @@ ul.crumbs span::before {
   text-transform: uppercase;
   font-size: 34px;
   line-height: 44px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   margin-bottom: 30px;
 }
@@ -2610,15 +2650,14 @@ ul.crumbs span::before {
 }
 .story__years span {
   font-size: 36px;
-  font-weight: 700;
-  color: #70b018;
+  color: var(--accent-color);
   padding-right: 15px;
   position: relative;
 }
 .story__years span::before {
   content: "";
   position: absolute;
-  background-color: #70b018;
+  background-color: var(--accent-color);
   width: 25px;
   height: 25px;
   border: solid 5px #ffffff;
@@ -2629,7 +2668,7 @@ ul.crumbs span::before {
 .story__years span::after {
   content: "";
   position: absolute;
-  border-bottom: 1px solid #70b018;
+  border-bottom: 1px solid var(--accent-color);
   padding-right: 50px;
   left: -55px;
   top: 50%;
@@ -2658,7 +2697,6 @@ ul.crumbs span::before {
   text-transform: uppercase;
   font-size: 34px;
   line-height: 44px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   margin-bottom: 30px;
 }
@@ -2670,6 +2708,26 @@ ul.crumbs span::before {
   border: 20px solid white;
   box-shadow: -1px 3px 19px -6px rgba(0, 0, 0, 0.1);
   width: 100%;
+}
+
+.pop-up {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.pop-up img {
+  width: 80%;
 }
 
 .blog-header {
@@ -3077,12 +3135,31 @@ ul.crumbs span::before {
   .benefit__title {
     width: auto;
   }
+  .program-icon {
+    font-size: 18px;
+    line-height: 30px;
+    gap: 10px;
+  }
   .card {
     width: 390px;
   }
   .swiper-button-prev,
   .swiper-button-next {
     width: 16%;
+  }
+  .about-my__photos::before {
+    height: 245px;
+  }
+  .progress {
+    flex-wrap: wrap;
+  }
+  .progress__header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .progress__column {
+    width: 50%;
   }
 }
 @media (max-width: 1050px) {
@@ -3144,18 +3221,40 @@ ul.crumbs span::before {
   .footer-menu__row-3 {
     grid-column: 1/3;
   }
+  .about-my__content h2 {
+    font-size: 42px;
+  }
+  .experience__inner {
+    flex-direction: column-reverse;
+  }
+  .experience__video {
+    width: auto;
+  }
+  .experience__content {
+    width: 80%;
+  }
+  .story__content {
+    padding: 0 25px;
+  }
+  .story__content > p {
+    width: auto;
+  }
+  .story__years {
+    width: auto;
+  }
 }
 @media (max-width: 900px) {
   .featured-left {
     margin-top: 70px;
     width: auto;
   }
-  .featured-left__title {
-    font-size: 34px;
-    line-height: 44px;
-  }
   .featured-left__girl {
     width: 400px;
+  }
+  .featured-left__title,
+  .about-my__content h2 {
+    font-size: 34px;
+    line-height: 44px;
   }
   .featured-right__quote {
     padding: 25px;
@@ -3217,6 +3316,12 @@ ul.crumbs span::before {
     background-size: contain;
     border: none;
     border-radius: 0;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  .program-icon h4 {
+    cursor: pointer;
+    pointer-events: all;
   }
   .program-left {
     width: 100%;
@@ -3244,6 +3349,55 @@ ul.crumbs span::before {
   .swiper-button-prev,
   .swiper-button-next {
     width: 7%;
+  }
+  .about-my__inner {
+    flex-direction: column;
+  }
+  .about-my__content {
+    width: 80%;
+  }
+  .about-my__photos {
+    width: 80%;
+  }
+  .about-my__content p {
+    width: auto;
+  }
+  .about-my__photos::before {
+    width: 150%;
+    left: -20%;
+  }
+  .progress__column {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .progress__column:last-child {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .experience__content h2 {
+    background-color: transparent;
+    border: none;
+  }
+  .experience__content p {
+    margin-left: 0;
+  }
+  .experience__content a {
+    margin-left: 0;
+  }
+  .story__content {
+    width: 55%;
+  }
+  .story__photo {
+    width: 45%;
+  }
+  .cert__header, .cert__item {
+    width: 50%;
+  }
+  .pop-up {
+    width: 100%;
+  }
+  .pop-up img {
+    width: 95%;
   }
 }
 @media (max-width: 740px) {
@@ -3282,6 +3436,27 @@ ul.crumbs span::before {
   .swiper-button-prev,
   .swiper-button-next {
     width: 15%;
+  }
+  .about-my__photo-one {
+    width: 75%;
+  }
+  .about-my__photo-two {
+    width: 40%;
+    left: 60%;
+  }
+  .story__photo {
+    display: none;
+  }
+  .story__content {
+    width: 80%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  .story__years span::after {
+    display: none;
+  }
+  .story__years span::before {
+    left: -30px;
   }
 }
 @media (max-width: 680px) {
@@ -3351,6 +3526,18 @@ ul.crumbs span::before {
   .swiper-button-next {
     width: 5%;
     background-color: transparent;
+  }
+  .cert__inner {
+    justify-content: center;
+  }
+  .cert__header, .cert__item {
+    width: 80%;
+  }
+  .pop-up {
+    width: 100%;
+  }
+  .pop-up img {
+    width: 100%;
   }
 }
 @media (max-width: 680px) and (orientation: landscape) {
@@ -3424,6 +3611,23 @@ ul.crumbs span::before {
   .featured-bottom .featured-bottom__numbers {
     gap: 0;
   }
+  .modal-content {
+    width: auto;
+  }
+  .progress__column {
+    width: 100%;
+    padding: 0;
+  }
+  .experience__video {
+    width: 100%;
+  }
+  .experience__video video {
+    height: auto;
+    width: 100%;
+  }
+  .featured-right__video-inner {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   .featured-bottom__number {
@@ -3463,11 +3667,43 @@ ul.crumbs span::before {
   .program__title h2,
   .calculator__title,
   .feedback__title,
-  .ready__content h2 {
+  .ready__content h2,
+  .about-my__content h2,
+  .experience__content h2,
+  .progress__header h2,
+  .story__content h2,
+  .cert__header h2 {
     font-size: 28px;
   }
   .program-centre img {
     max-width: none;
+  }
+  .about-my__photo-two {
+    border: solid 10px #ffffff;
+    top: 15px;
+  }
+  .about-my__photos::before {
+    height: 60%;
+  }
+  .about-my__content {
+    width: auto;
+  }
+  .experience__content,
+  .progress__header {
+    width: auto;
+  }
+  .progress__card-white,
+  .progress__card-transparent {
+    padding: 15px;
+  }
+  .story__content {
+    width: auto;
+  }
+  .story__years span {
+    display: block;
+  }
+  .cert__header {
+    width: 100%;
   }
 }
 @media (max-width: 400px) {
@@ -3513,5 +3749,21 @@ ul.crumbs span::before {
   }
   .slide__content {
     padding: 0 10px;
+  }
+  .modal button {
+    padding: 12px 25px;
+  }
+  .progress__card-white,
+  .progress__card-transparent {
+    padding: 10px;
+  }
+  .progress__card-white div,
+  .progress__card-transparent div {
+    font-size: 35px;
+    padding-right: 15px;
+  }
+  .progress__card-white h3,
+  .progress__card-transparent h3 {
+    font-size: 20px;
   }
 }

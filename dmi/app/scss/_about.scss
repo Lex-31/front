@@ -1,11 +1,12 @@
 .about-my {
   margin-top: 20px;
-  margin-bottom: 100px;
   overflow: hidden;
 
   &__inner {
     display: flex;
     align-items: center;
+    margin-bottom: 100px;
+
   }
 
   &__content {
@@ -16,7 +17,7 @@
     text-transform: uppercase;
     font-size: 50px;
     line-height: 60px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     margin-bottom: 40px;
   }
@@ -37,15 +38,15 @@
     content: '';
     height: 290px;
     width: 840px;
-    background-color: $accent;
+    background-color: var(--accent-color);
     position: absolute;
-    bottom: 0;
-    left: 10px;
+    bottom: -20px;
+    left: 50px;
     z-index: -1;
   }
 
   &__photo-one {
-    width: 380px;
+    width: 63%;
     margin-top: 40px;
     z-index: 1;
   }
@@ -53,10 +54,10 @@
   &__photo-two {
     position: absolute;
     border: solid 20px $white;
-    width: 190px;
+    width: 31%;
     z-index: 2;
     top: 0;
-    right: 90px;
+    left: 45%;
   }
 }
 
@@ -95,11 +96,20 @@ ul.crumbs {
   }
 
   &__video {
-    width: 60%;
+    width: 50%;
+
+    & .featured-right__video-inner {
+      margin-left: 0;
+    }
+
+    & video {
+      width: auto;
+      height: 90vh;
+    }
   }
 
   &__content {
-    width: 40%;
+    width: 50%;
     padding: 30px 0;
   }
 
@@ -107,25 +117,28 @@ ul.crumbs {
     text-transform: uppercase;
     font-size: 34px;
     line-height: 44px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     background-color: $white;
     border: 35px solid $white;
     width: 100%;
-    margin-left: -60px;
     margin-bottom: 30px;
   }
 
   &__content p {
     line-height: 28px;
     color: $grey;
-    margin-left: 70px;
+    margin-left: 50px;
     margin-bottom: 40px;
   }
 
   &__content a {
-    margin-left: 70px;
+    margin-left: 50px;
   }
+}
+
+.about-overlay {
+  background-color: rgba($color: $black, $alpha: .2);
 }
 
 .progress {
@@ -141,7 +154,7 @@ ul.crumbs {
     text-transform: uppercase;
     font-size: 34px;
     line-height: 44px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     margin-bottom: 30px;
   }
@@ -156,7 +169,7 @@ ul.crumbs {
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 20px;
-    font-weight: 500;
+    @extend %opensans-500;
     padding-left: 30px;
     position: relative;
   }
@@ -164,7 +177,7 @@ ul.crumbs {
   &__list h4::before {
     content: '';
     display: block;
-    background-color: $accent;
+    background-color: var(--accent-color);
     width: 12px;
     height: 12px;
     border-bottom: solid 3px $black;
@@ -186,15 +199,15 @@ ul.crumbs {
     & div {
       font-size: 50px;
       line-height: 60px;
-      font-weight: 700;
-      color: $accent;
+      @extend %opensans-700;
+      color: var(--accent-color);
       padding-right: 20px;
     }
 
     & h3 {
       font-size: 24px;
       line-height: 34px;
-      font-weight: 700;
+      @extend %opensans-700;
       color: $grey;
     }
   }
@@ -217,6 +230,7 @@ ul.crumbs {
     width: 100%;
     height: 1600px;
     object-fit: cover;
+    object-position: right;
   }
 
   &__content {
@@ -228,7 +242,7 @@ ul.crumbs {
     text-transform: uppercase;
     font-size: 34px;
     line-height: 44px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     margin-bottom: 30px;
   }
@@ -251,8 +265,8 @@ ul.crumbs {
 
   &__years span {
     font-size: 36px;
-    font-weight: 700;
-    color: $accent;
+    @extend %opensans-700;
+    color: var(--accent-color);
     padding-right: 15px;
     position: relative;
   }
@@ -260,7 +274,7 @@ ul.crumbs {
   &__years span::before {
     content: '';
     position: absolute;
-    background-color: $accent;
+    background-color: var(--accent-color);
     width: 25px;
     height: 25px;
     border: solid 5px $white ;
@@ -272,7 +286,7 @@ ul.crumbs {
   &__years span::after {
     content: '';
     position: absolute;
-    border-bottom: 1px solid $accent;
+    border-bottom: 1px solid var(--accent-color);
     padding-right: 50px;
     left: -55px;
     top: 50%;
@@ -307,7 +321,7 @@ ul.crumbs {
     text-transform: uppercase;
     font-size: 34px;
     line-height: 44px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     margin-bottom: 30px;
   }
@@ -322,4 +336,24 @@ ul.crumbs {
     box-shadow: -1px 3px 19px -6px rgb(0 0 0 / 10%);
     width: 100%;
   }
+}
+
+.pop-up {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $black, $alpha: 0.7);
+  overflow: auto;
+}
+
+.pop-up img {
+  width: 80%;
 }

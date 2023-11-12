@@ -11,7 +11,7 @@
     text-transform: uppercase;
     font-size: 50px;
     line-height: 60px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     margin-bottom: 30px;
     text-align: center;
@@ -58,7 +58,7 @@
   &__photo span {
     display: inline-block;
     font-size: 14px;
-    border: solid 1px $accent;
+    border: solid 1px var(--accent-color);
     background-color: $black;
     color: $white;
     padding: 10px 20px;
@@ -72,7 +72,7 @@
     display: inline-block;
     font-size: 36px;
     line-height: 44px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     background-color: $white;
     padding: 30px;
@@ -84,7 +84,7 @@
   }
 
   &__content h3 a:hover {
-    color: $accent;
+    color: var(--accent-color);
   }
 
   &__content p {
@@ -102,6 +102,12 @@
   &__details {
     font-size: 14px;
     line-height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .details-border {
     border-top: solid 1px $black;
     padding-top: 10px;
     margin-left: 30px;
@@ -109,8 +115,6 @@
 
   &__detail {
     display: inline-block;
-    padding-left: 0;
-    margin-right: 30px;
   }
 
   &__detail::before {

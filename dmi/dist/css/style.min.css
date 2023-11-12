@@ -1213,7 +1213,7 @@ a {
   font-weight: 400;
 }
 
-.progress__list h4, .footer-title button, .person-info h5, .post__date, .post__next, .calc-bmi__btn, .program-icon, .button {
+.blog-article__content h6, .progress__list h4, .footer-title button, .person-info h5, .post__date, .post__next, .calc-bmi__btn, .program-icon, .button {
   font-family: "OpenSans-Medium", sans-serif;
   font-weight: 500;
 }
@@ -1223,12 +1223,12 @@ a {
   font-weight: 600;
 }
 
-.story__years span, .progress__card-white h3, .progress__card-transparent h3, .progress__card-white div, .progress__card-transparent div, .ready__content h6, .post__title, .card__title, .featured-bottom__number, .featured-right__title {
+.comments__user-name h5, .comments h3, .blog-author h5, .story__years span, .progress__card-white h3, .progress__card-transparent h3, .progress__card-white div, .progress__card-transparent div, .ready__content h6, .post__title, .card__title, .featured-bottom__number, .featured-right__title {
   font-family: "OpenSans-Bold", sans-serif;
   font-weight: 700;
 }
 
-.cert__header h2, .story__content h2, .progress__header h2, .experience__content h2, .about-my__content h2, .ready__content h2, .feedback__title, .blog__title, .calculator__title, .program__title h2, .benefit__title, .about-info h2, .featured-left__title {
+.blog-article__header h3, .blog-item__content h3 a, .blog-header__inner h2, .cert__header h2, .story__content h2, .progress__header h2, .experience__content h2, .about-my__content h2, .ready__content h2, .feedback__title, .blog__title, .calculator__title, .program__title h2, .benefit__title, .about-info h2, .featured-left__title {
   font-family: "OpenSans-ExtraBold", sans-serif;
   font-weight: 800;
 }
@@ -2483,6 +2483,7 @@ body {
 
 ul.crumbs {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 ul.crumbs a {
@@ -2692,6 +2693,7 @@ ul.crumbs span::before {
 }
 .cert__item {
   padding: 12px;
+  cursor: pointer;
 }
 .cert__header h2 {
   text-transform: uppercase;
@@ -2742,7 +2744,6 @@ ul.crumbs span::before {
   text-transform: uppercase;
   font-size: 50px;
   line-height: 60px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   margin-bottom: 30px;
   text-align: center;
@@ -2783,7 +2784,7 @@ ul.crumbs span::before {
 .blog-item__photo span {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #70b018;
+  border: solid 1px var(--accent-color);
   background-color: #000000;
   color: #ffffff;
   padding: 10px 20px;
@@ -2795,7 +2796,6 @@ ul.crumbs span::before {
   display: inline-block;
   font-size: 36px;
   line-height: 44px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   background-color: #ffffff;
   padding: 30px;
@@ -2806,7 +2806,7 @@ ul.crumbs span::before {
   transition: color 0.3s;
 }
 .blog-item__content h3 a:hover {
-  color: #70b018;
+  color: var(--accent-color);
 }
 .blog-item__content p {
   line-height: 28px;
@@ -2821,14 +2821,17 @@ ul.crumbs span::before {
 .blog-item__details {
   font-size: 14px;
   line-height: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.blog-item .details-border {
   border-top: solid 1px #000000;
   padding-top: 10px;
   margin-left: 30px;
 }
 .blog-item__detail {
   display: inline-block;
-  padding-left: 0;
-  margin-right: 30px;
 }
 .blog-item__detail::before {
   content: url("../images/calendar.svg");
@@ -2870,7 +2873,6 @@ ul.crumbs span::before {
 .blog-article__header h3 {
   font-size: 36px;
   line-height: 44px;
-  font-weight: 800;
   letter-spacing: 1.2px;
   background-color: #ffffff;
   padding: 30px;
@@ -2878,13 +2880,15 @@ ul.crumbs span::before {
 }
 .blog-article__details {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 30px;
   font-size: 14px;
   line-height: 28px;
 }
 .blog-article__meta {
   display: flex;
+  flex-wrap: wrap;
 }
 .blog-article__meta a {
   display: inline-block;
@@ -2892,6 +2896,7 @@ ul.crumbs span::before {
   background-color: #000000;
   color: #ffffff;
   padding: 10px 20px;
+  max-height: 50px;
 }
 .blog-article__content {
   padding: 50px 200px;
@@ -2899,12 +2904,14 @@ ul.crumbs span::before {
 .blog-article__content h6 {
   font-size: 24px;
   line-height: 34px;
-  font-weight: 500;
   color: #4c4c4c;
   margin-bottom: 30px;
 }
 .blog-article__content img {
   padding: 30px 0;
+}
+.blog-article__content p {
+  line-height: 28px;
 }
 
 .blog-author .container {
@@ -2923,6 +2930,9 @@ ul.crumbs span::before {
   height: 100%;
   margin-right: 40px;
 }
+.blog-author__img img {
+  max-width: none;
+}
 .blog-author__img::after {
   content: "";
   background-color: #70b018;
@@ -2936,7 +2946,6 @@ ul.crumbs span::before {
 .blog-author h5 {
   font-size: 18px;
   line-height: 34px;
-  font-weight: 700;
   margin-bottom: 10px;
 }
 .blog-author p {
@@ -2960,7 +2969,6 @@ ul.crumbs span::before {
 .comments h3 {
   font-size: 34px;
   line-height: 44px;
-  font-weight: 700;
   margin-bottom: 40px;
 }
 .comments__data li {
@@ -2985,7 +2993,6 @@ ul.crumbs span::before {
 .comments__user-name h5 {
   font-size: 18px;
   line-height: 34px;
-  font-weight: 700;
   margin-bottom: 5px;
 }
 .comments__user-name span {
@@ -3120,6 +3127,9 @@ ul.crumbs span::before {
   .card__title a {
     margin-bottom: 20px;
   }
+  .comments__form p {
+    padding: 10px 0 40px;
+  }
 }
 @media (max-width: 1180px) {
   .about-info h2 {
@@ -3221,7 +3231,8 @@ ul.crumbs span::before {
   .footer-menu__row-3 {
     grid-column: 1/3;
   }
-  .about-my__content h2 {
+  .about-my__content h2,
+  .blog-header__inner h2 {
     font-size: 42px;
   }
   .experience__inner {
@@ -3242,6 +3253,39 @@ ul.crumbs span::before {
   .story__years {
     width: auto;
   }
+  .blog-item {
+    flex-direction: column;
+  }
+  .blog-item__photo, .blog-item__content {
+    width: 80%;
+  }
+  .blog-item__photo img {
+    width: 100%;
+  }
+  .blog-item__content h3 {
+    text-align: center;
+  }
+  .blog-item__content h3 a {
+    margin-left: 0;
+    margin-top: -35px;
+    width: 90%;
+  }
+  .blog-item__content p, .blog-item__content .post__next {
+    padding-left: 0;
+  }
+  .blog-item__details {
+    margin-left: 0;
+  }
+  .blog-item .details-border {
+    margin-left: 0;
+  }
+  .blog-article__header {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .comments__form div {
+    flex-direction: column;
+  }
 }
 @media (max-width: 900px) {
   .featured-left {
@@ -3252,7 +3296,8 @@ ul.crumbs span::before {
     width: 400px;
   }
   .featured-left__title,
-  .about-my__content h2 {
+  .about-my__content h2,
+  .blog-header__inner h2 {
     font-size: 34px;
     line-height: 44px;
   }
@@ -3399,6 +3444,20 @@ ul.crumbs span::before {
   .pop-up img {
     width: 95%;
   }
+  .blog-article__content {
+    padding: 50px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .blog-author .container,
+  .comments .container {
+    padding: 0 10px;
+  }
+  .blog-author__content,
+  .comments {
+    margin: 50px auto;
+    width: 80%;
+  }
 }
 @media (max-width: 740px) {
   .featured__inner {
@@ -3457,6 +3516,11 @@ ul.crumbs span::before {
   }
   .story__years span::before {
     left: -30px;
+  }
+  .blog-item__content h3 a,
+  .blog-article__header h3 {
+    font-size: 26px;
+    padding: 18px;
   }
 }
 @media (max-width: 680px) {
@@ -3538,6 +3602,14 @@ ul.crumbs span::before {
   }
   .pop-up img {
     width: 100%;
+  }
+  .blog-header__inner {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+  .blog-article__meta a {
+    max-height: none;
+    padding: 5px 20px;
   }
 }
 @media (max-width: 680px) and (orientation: landscape) {
@@ -3628,6 +3700,18 @@ ul.crumbs span::before {
   .featured-right__video-inner {
     width: 100%;
   }
+  .blog-item__photo {
+    width: 100%;
+  }
+  .blog-item__content h3 a {
+    width: 100%;
+  }
+  .blog-article__img {
+    width: 100%;
+  }
+  .blog-article__meta {
+    flex-direction: column;
+  }
 }
 @media (max-width: 500px) {
   .featured-bottom__number {
@@ -3672,7 +3756,9 @@ ul.crumbs span::before {
   .experience__content h2,
   .progress__header h2,
   .story__content h2,
-  .cert__header h2 {
+  .cert__header h2,
+  .blog-header__inner h2,
+  .comments h3 {
     font-size: 28px;
   }
   .program-centre img {
@@ -3704,6 +3790,42 @@ ul.crumbs span::before {
   }
   .cert__header {
     width: 100%;
+  }
+  .blog-item__content {
+    width: 100%;
+  }
+  .blog-item__content h3 a {
+    padding: 0;
+    margin-top: 15px;
+  }
+  .blog-article__header {
+    width: 100%;
+  }
+  .blog-article__content {
+    width: 100%;
+  }
+  .blog-article__content,
+  .blog-article .comments {
+    width: 100%;
+  }
+  .blog-article__content h6 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .blog-author__content,
+  .comments {
+    width: 100%;
+  }
+  .blog-author__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .comments__data p {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .comments__form {
+    padding: 15px;
   }
 }
 @media (max-width: 400px) {
@@ -3765,5 +3887,8 @@ ul.crumbs span::before {
   .progress__card-white h3,
   .progress__card-transparent h3 {
     font-size: 20px;
+  }
+  .blog-item__photo span {
+    padding: 6px 12px;
   }
 }

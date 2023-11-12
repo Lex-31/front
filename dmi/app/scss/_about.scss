@@ -63,6 +63,7 @@
 
 ul.crumbs {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 
   & a {
@@ -315,6 +316,7 @@ ul.crumbs {
 
   &__item {
     padding: 12px;
+    cursor: pointer;
   }
 
   &__header h2 {

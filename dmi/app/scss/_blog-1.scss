@@ -28,7 +28,7 @@
   &__header h3 {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 800;
+    @extend %opensans-800;
     letter-spacing: 1.2px;
     background-color: $white;
     padding: 30px;
@@ -37,14 +37,16 @@
 
   &__details {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
     font-size: 14px;
     line-height: 28px;
   }
 
   &__meta {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__meta a {
@@ -53,6 +55,7 @@
     background-color: $black;
     color: $white;
     padding: 10px 20px;
+    max-height: 50px;
   }
 
   &__content {
@@ -62,13 +65,17 @@
   &__content h6 {
     font-size: 24px;
     line-height: 34px;
-    font-weight: 500;
+    @extend %opensans-500;
     color: $grey;
     margin-bottom: 30px;
   }
 
   &__content img {
     padding: 30px 0;
+  }
+
+  &__content p {
+    line-height: 28px;
   }
 }
 
@@ -92,6 +99,10 @@
     margin-right: 40px;
   }
 
+  &__img img {
+    max-width: none;
+  }
+
   &__img::after {
     content: '';
     background-color: $accent;
@@ -106,7 +117,7 @@
   & h5 {
     font-size: 18px;
     line-height: 34px;
-    font-weight: 700;
+    @extend %opensans-700;
     margin-bottom: 10px;
   }
 
@@ -135,7 +146,7 @@
   & h3 {
     font-size: 34px;
     line-height: 44px;
-    font-weight: 700;
+    @extend %opensans-700;
     margin-bottom: 40px;
   }
 
@@ -165,7 +176,7 @@
   &__user-name h5 {
     font-size: 18px;
     line-height: 34px;
-    font-weight: 700;
+    @extend %opensans-700;
     margin-bottom: 5px;
   }
 
@@ -214,7 +225,7 @@
     padding: 10px 75px 40px;
   }
 
-  &__form a {
+  &__form button {
     width: 100%;
     text-align: center;
   }

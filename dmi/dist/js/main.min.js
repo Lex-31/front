@@ -42,7 +42,7 @@ btn.addEventListener('click', () => { // скрол страницы вверх
 });
 
 //Video overlay
-if (window.location.pathname === '/index.html' || window.location.pathname === '/about.html') { //выполняем код только если находимся на странице
+if (window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/about.html') { //выполняем код только если находимся на странице
   console.log(window.location.pathname);
   const overlay = document.querySelector('.featured-right__video-overlay');
   const clip = document.querySelector('.featured-right__video-inner video');

@@ -2516,11 +2516,14 @@ ul.crumbs span::before {
   width: 50%;
 }
 .experience__video .featured-right__video-inner {
+  max-width: 90%;
   margin-left: 0;
 }
 .experience__video video {
   width: auto;
-  height: 90vh;
+  height: 100%;
+  max-width: 100%;
+  max-height: 90vh;
 }
 .experience__content {
   width: 50%;

@@ -100,12 +100,15 @@ ul.crumbs {
     width: 50%;
 
     & .featured-right__video-inner {
+      max-width: 90%;
       margin-left: 0;
     }
 
     & video {
       width: auto;
-      height: 90vh;
+      height: 100%;
+      max-width: 100%;
+      max-height: 90vh;
     }
   }
 
